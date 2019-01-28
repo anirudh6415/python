@@ -1,0 +1,25 @@
+class menu :
+    def __init__(self):
+        self.d={}
+
+    def __setitem__(self,key,other):
+        if key in self.d.keys():
+            raise ValueError("duplicate key found {0}".format(key))
+        else:
+            self.d[key]=other
+               
+    def show(self):
+        print(self.d)
+m=menu()
+m["idly"] = 30
+m["vada"]=7
+m["idly"] =2
+m.show()
+
+output:
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python codes\exceptation.py", line 16, in <module>
+    m["idly"] =2
+  File "C:\Users\Administrator\Desktop\python codes\exceptation.py", line 7, in __setitem__
+    raise ValueError("duplicate key found {0}".format(key))
+ValueError: duplicate key found idly
