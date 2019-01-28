@@ -1,0 +1,21 @@
+class menu :
+    def __init__(self):
+        self.d={}
+        
+    def __add__(self,other):
+        self.d[other[0]]=other[1]
+        return self
+    
+        
+    def __repr__(self):
+        return repr(self.d)             
+##    def show(self):
+##        print(self.d)
+m=menu()
+##m["idly"] = 10   
+##m= menu(("anirudh",45),("abhi",20))
+##m+("idly",10)
+##m+("vada",20)
+m+("idly",10)+("vada",20)+("super",20)
+##m.show()
+print(m)
