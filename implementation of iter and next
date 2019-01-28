@@ -22,3 +22,7 @@ for i,j in m:
     print(i,j)
     break
     
+    
+output :
+('idly', 10) ('vada', 20)
+    
