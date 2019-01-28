@@ -1,0 +1,12 @@
+class menu :
+    def __init__(self):
+        self.d={}
+        
+    def __setitem__(self,key,other):
+        self.d[key]=other
+    def show(self):
+        print(self.d)
+
+m=menu()
+m["idly"] = 10
+m["idly"] = 20
