@@ -1,0 +1,25 @@
+class fibo:
+    def __init__(self,x):
+        self.x=x   
+        self.t1=0
+        self.t2=1   
+    def __iter__(self):
+        self.n=0
+        print(self.t1,)
+        print(self.t2)
+        return self
+    def __next__(self):
+        result=0
+        if self.n <= self.x :
+            result=self.t1+self.t2
+            self.t1=self.t2
+            self.t2=result
+            return result
+        else :
+            raise StopIteration
+n=10   
+f=fibo(n)
+for i in f:
+    print(i)
+    if i >n:
+        break
