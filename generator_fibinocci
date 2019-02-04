@@ -1,0 +1,20 @@
+"""program for fibinocci series using generator"""
+class fibo :
+        def __init__(self):
+                self
+        def fib(self,x):
+                t1=1
+                t2=0
+                for i in range(x):
+                        t1,t2 = t2, t1+t2
+                        yield t1
+
+f=fibo()
+for i in f.fib(10):
+        print(i)
+        
+
+"""why it is better to use generators instead of iterators ?? """
+"""generator is the simpest tool for creating iterators.The Generators will automatically create iter() and next() method.
+other than automatic creation of these methods generators automatically raise StopIteration.These features of Generators makes
+creation of iterator simple and easy.""""
