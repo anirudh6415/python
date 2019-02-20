@@ -1,18 +1,11 @@
-
-class dict:
-    def __init__(self):
-        self.d={}
 class menu(dict):
-    def __setitem__(self,key,other):
-        self.d[key]=other
-    def show(self):
-        print(self.d)
-        
+    def __setattr__(self,k,value): 
+        self[k]=value
         
 m=menu()
-m["idly"] = 10
-m["vada"] = 20
-m.show()
+m["idly"]=10
+m["vada"]=20
+print(m)
 
 output:
 {'idly': 10, 'vada': 20}
